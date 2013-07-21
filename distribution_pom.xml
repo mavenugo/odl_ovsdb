@@ -1,0 +1,21 @@
+diff --git a/opendaylight/distribution/opendaylight/pom.xml b/opendaylight/distribution/opendaylight/pom.xml
+index 50b34fa..b4c50b4 100644
+--- a/opendaylight/distribution/opendaylight/pom.xml
++++ b/opendaylight/distribution/opendaylight/pom.xml
+@@ -60,6 +60,8 @@
+     <module>../../topologymanager</module>
+     <module>../../usermanager/api</module>
+     <module>../../usermanager/implementation</module>
++    <module>../../connectionmanager/api</module>
++    <module>../../connectionmanager/implementation</module>
+     <module>../../security</module>
+ 
+ 
+@@ -96,6 +98,7 @@
+     <!-- Southbound bundles -->
+     <module>../../protocol_plugins/openflow</module>
+     <module>../../protocol_plugins/stub</module>
++    <module>../../protocol_plugins/ovsdb</module>
+ 
+     <!-- Samples -->
+     <module>../../samples/simpleforwarding</module>

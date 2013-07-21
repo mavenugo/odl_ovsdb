@@ -1,0 +1,165 @@
+diff --git a/opendaylight/commons/opendaylight/pom.xml b/opendaylight/commons/opendaylight/pom.xml
+index 3321880..309896a 100644
+--- a/opendaylight/commons/opendaylight/pom.xml
++++ b/opendaylight/commons/opendaylight/pom.xml
+@@ -41,6 +41,7 @@
+     <geminiweb.version>2.2.0.RELEASE</geminiweb.version>
+     <checkstyle.version>2.10</checkstyle.version>
+     <testvm.argLine>-Xmx1024m -XX:MaxPermSize=256m</testvm.argLine>
++    <fasterxml.version>2.0.2</fasterxml.version>
+   </properties>
+ 
+   <pluginRepositories>
+@@ -156,6 +157,13 @@
+       <name>jboss.releases</name>
+       <url>${nexusproxy}/repositories/jboss.releases/</url>
+     </repository>
++    <!-- jsonrpc4j mirror -->
++    <repository>
++      <id>jsonrpc4j-webdav-maven-repo</id>
++      <name>jsonrpc4j maven repository</name>
++      <url>http://jsonrpc4j.googlecode.com/svn/maven/repo/</url>
++      <layout>default</layout>
++    </repository>
+     <!-- OpenDayLight Released artifact -->
+     <repository>
+       <id>opendaylight-release</id>
+@@ -897,5 +905,138 @@
+       <artifactId>jersey-json</artifactId>
+       <version>${jersey.version}</version>
+     </dependency>
++    <dependency>
++      <groupId>com.fasterxml.jackson.core</groupId>
++      <artifactId>jackson-annotations</artifactId>
++      <version>${fasterxml.version}</version>
++    </dependency>
++    <dependency>
++      <groupId>com.fasterxml.jackson.core</groupId>
++      <artifactId>jackson-core</artifactId>
++      <version>${fasterxml.version}</version>
++    </dependency>
++    <dependency>
++     <groupId>com.fasterxml.jackson.core</groupId>
++      <artifactId>jackson-databind</artifactId>
++      <version>${fasterxml.version}</version>
++    </dependency>
++    <dependency>
++      <groupId>javax.portlet</groupId>
++      <artifactId>portlet-api</artifactId>
++      <version>2.0</version>
++    </dependency>
++    <dependency>
++     <groupId>com.googlecode</groupId>
++      <artifactId>jsonrpc4j</artifactId>
++      <version>0.28</version>
++    </dependency>
++    <dependency>
++      <groupId>org.apache.httpcomponents</groupId>
++      <artifactId>httpclient</artifactId>
++      <version>4.2.5</version>
++    </dependency>
++    <dependency>
++      <groupId>commons-codec</groupId>
++      <artifactId>commons-codec</artifactId>
++      <version>1.6</version>
++    </dependency>
++<!--
++                 | spring dependencies
++                 +-->
++                <dependency>
++                        <groupId>org.springframework</groupId>
++                        <artifactId>spring-core</artifactId>
++                        <version>${spring.version}</version>
++                        <optional>true</optional>
++                </dependency>
++                <dependency>
++                        <groupId>org.springframework</groupId>
++                        <artifactId>spring-context</artifactId>
++                        <version>${spring.version}</version>
++                        <optional>true</optional>
++                </dependency>
++                <dependency>
++                        <groupId>org.springframework</groupId>
++                        <artifactId>spring-web</artifactId>
++                        <version>${spring.version}</version>
++                        <optional>true</optional>
++                </dependency>
++                <dependency>
++                        <groupId>org.springframework</groupId>
++                        <artifactId>spring-test</artifactId>
++                        <version>${spring.version}</version>
++                        <scope>test</scope>
++                </dependency>
++                <!--
++                | apache http client
++                +-->
++                <dependency>
++                        <groupId>commons-codec</groupId>
++                        <artifactId>commons-codec</artifactId>
++                        <version>1.4</version>
++                        <optional>true</optional>
++                </dependency>
++                <dependency>
++                        <groupId>org.apache.httpcomponents</groupId>
++                        <artifactId>httpcore-nio</artifactId>
++                        <version>4.2.1</version>
++                        <optional>true</optional>
++                </dependency>
++
++                <!--
++                 | Servlet
++                 +-->
++                <dependency>
++                        <groupId>javax.servlet</groupId>
++                        <artifactId>javax.servlet-api</artifactId>
++                        <version>3.1-b06</version>
++                        <scope>provided</scope>
++                </dependency>
++
++                <!--
++                 | test dependencies
++                 +-->
++                <dependency>
++                        <groupId>junit</groupId>
++                        <artifactId>junit</artifactId>
++                        <version>4.10</version>
++                        <scope>test</scope>
++                </dependency>
++                <dependency>
++                        <groupId>org.jmock</groupId>
++                        <artifactId>jmock-junit4</artifactId>
++                        <version>2.5.1</version>
++                        <scope>test</scope>
++                </dependency>
++                <dependency>
++                        <groupId>org.jmock</groupId>
++                        <artifactId>jmock</artifactId>
++                        <version>2.5.1</version>
++                        <scope>test</scope>
++                </dependency>
++                <dependency>
++                        <groupId>org.eclipse.jetty</groupId>
++                        <artifactId>jetty-server</artifactId>
++                        <version>9.0.0.RC0</version>
++                        <scope>test</scope>
++                        <exclusions>
++                                <exclusion>
++                                        <artifactId>javax.servlet</artifactId>
++                                        <groupId>org.eclipse.jetty.orbit</groupId>
++                                </exclusion>
++                        </exclusions>
++                </dependency>
++                <dependency>
++                        <groupId>org.eclipse.jetty</groupId>
++                        <artifactId>jetty-servlet</artifactId>
++                        <version>9.0.0.RC0</version>
++                        <scope>test</scope>
++                        <exclusions>
++                                <exclusion>
++                                        <artifactId>javax.servlet</artifactId>
++                                        <groupId>org.eclipse.jetty.orbit</groupId>
++                                </exclusion>
++                        </exclusions>
++                </dependency>
+   </dependencies>
+ </project>
