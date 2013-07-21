@@ -24,7 +24,7 @@ public interface IConnectionService {
      * @param node
      * @param flow
      */
-    public Status disconnectNode(Node node);
+    public Status disconnect(Node node);
 
     /**
      * Connect to a node with a specified node type.
@@ -51,6 +51,6 @@ public interface IConnectionService {
      *
      *  @return Node
      */
-    public Node connect (String connectionIdentifier, Map<String, String> params);
+    public Node connect (String connectionIdentifier, Map<ConnectionConstants, String> params);
 
 }

@@ -43,7 +43,9 @@
               org.opendaylight.controller.sal.match,
               org.opendaylight.controller.sal.inventory,
               org.opendaylight.controller.sal.flowprogrammer,
-              org.opendaylight.controller.sal.reader
+              org.opendaylight.controller.sal.reader,
+              org.opendaylight.controller.sal.connection,
+              org.opendaylight.controller.sal.configuration
             </Export-Package>
           </instructions>
           <manifestLocation>${project.basedir}/META-INF</manifestLocation>

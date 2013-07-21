@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1374434102233
+Build-Jdk: 1.7.0_17
+Built-By: vmadhu
+Bundle-ManifestVersion: 2
+Bundle-Name: connectionmanager
+Bundle-SymbolicName: org.opendaylight.controller.connectionmanager
+Bundle-Version: 0.4.0.SNAPSHOT
+Created-By: Apache Maven Bundle Plugin
+Export-Package: org.opendaylight.controller.connectionmanager;uses:="org
+ .opendaylight.controller.sal.core,org.opendaylight.controller.sal.conne
+ ction,org.opendaylight.controller.sal.utils";version="0.4.0.SNAPSHOT"
+Import-Package: org.apache.commons.lang3.builder;version="[3.1,4)",org.o
+ pendaylight.controller.sal.connection;version="[0.5,1)",org.opendayligh
+ t.controller.sal.core;version="[0.5,1)",org.opendaylight.controller.sal
+ .utils;version="[0.5,1)"
+Tool: Bnd-1.50.0
